@@ -1,0 +1,236 @@
+/*======= Google fonts =======*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(
+        243.18deg,
+        #72023e 0%,
+        #3e0638 16.21%,
+        #030a31 44.79%,
+        #02061c 70.83%,
+        #000000 93.23%
+      );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.analogic_clock {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 87, 255, 0.4) 0%, rgba(0, 0, 0, 0) 45.1%, #000000 100%);
+  position: relative;
+  width: 460px;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 0px 250px 30px rgba(255, 255, 255, 0.25);
+}
+.analogic_clock:before{
+    z-index: 000;
+    content: "Clock";
+    position: absolute;
+    color: #cee0f6;
+    font-size: 6.5em;
+    font-weight: 700;
+    opacity: 0.07;
+}
+.analogic_clock:after{
+    content: "Analog";
+    position: absolute;
+    color: #cee0f6;
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.12;
+    transform: translate(140px, 55px);
+}
+
+.analogic_clock ul {
+  list-style: none;
+}
+
+.hour_conteiner {
+  width: 460px;
+}
+
+.hour_numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hour_numbers li {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+
+.hour_numbers .num {
+  color: #cee0f6;
+  font-size: 1.6em;
+  font-weight: 400;
+  margin: 10px;
+}
+
+.hour_numbers li:nth-child(1) {
+  transform: rotate(90deg);
+}
+.hour_numbers li:nth-child(2) {
+  transform: rotate(180deg);
+}
+.hour_numbers li:nth-child(3) {
+  transform: rotate(270deg);
+}
+
+.hour_numbers li:nth-child(1) .num {
+  transform: rotate(-90deg);
+}
+.hour_numbers li:nth-child(2) .num {
+  transform: rotate(-180deg);
+}
+.hour_numbers li:nth-child(3) .num {
+  transform: rotate(-270deg);
+}
+
+.hour-marks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hour-marks .mark {
+  background-color: #cee0f6;
+  width: 1px;
+  height: 19px;
+}
+
+.hour-marks li {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+
+.hour-marks li:nth-child(1) {
+  transform: rotate(30deg);
+}
+.hour-marks li:nth-child(2) {
+  transform: rotate(60deg);
+}
+.hour-marks li:nth-child(3) {
+  transform: rotate(120deg);
+}
+.hour-marks li:nth-child(4) {
+  transform: rotate(150deg);
+}
+.hour-marks li:nth-child(5) {
+  transform: rotate(210deg);
+}
+.hour-marks li:nth-child(6) {
+  transform: rotate(240deg);
+}
+.hour-marks li:nth-child(7) {
+  transform: rotate(300deg);
+}
+.hour-marks li:nth-child(8) {
+  transform: rotate(330deg);
+}
+
+.middle_lines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.middle_lines .line {
+  background: #cee0f6;
+  width: 1px;
+  height: 140px;
+  opacity: 0.2;
+  margin-top: 55px;
+}
+
+.middle_lines li {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+
+.middle_lines li:nth-child(1) {
+  transform: rotate(90deg);
+}
+.middle_lines li:nth-child(2) {
+  transform: rotate(180deg);
+}
+.middle_lines li:nth-child(3) {
+  transform: rotate(270deg);
+}
+.hands_container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hand {
+  position: absolute;
+  z-index: 888;
+}
+.hr-hand {
+  width: 12px;
+  height: 280px;
+ 
+}
+.hr-hand:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(180deg, #00FFB2 2.06%, rgba(0, 255, 178, 0) 53.08%);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(2, 2, 2, 0.5);
+}
+.min-hand {
+  width: 8px;
+  height: 320px;
+ 
+ 
+}
+.min-hand:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(180deg, #00D1FF 2.06%, rgba(0, 209, 255, 0) 78.84%);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(2, 2, 2, 0.5);
+}
+.sec-hand {
+  width: 5px;
+  height: 335px;
+ 
+ 
+}
+.sec-hand:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg, #000AFF 2.06%, rgba(0, 10, 255, 0) 31.52%);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(2, 2, 2, 0.5);
+}
+
+.center-dot{
+    z-index: 999;
+    position: absolute;
+    background-color: #cee0f6;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 7px solid #2d2f41;
+}
